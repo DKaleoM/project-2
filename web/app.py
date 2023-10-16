@@ -35,7 +35,7 @@ def getResponse(path):
     #ensure path is legal
     for forbidden in FORBIDDEN_STRINGS:
         if forbidden in path:
-            return getErrorPage(STATUS_FORBIDDEN),STATUS_NOT_FOUND
+            return getErrorPage(STATUS_FORBIDDEN),STATUS_FORBIDDEN
 
     #find file and respond, or show 404 error page if not found
     completeFilePath = get_full_path(path)
